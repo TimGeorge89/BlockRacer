@@ -23,10 +23,10 @@ public class PlayerControls : MonoBehaviour
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         if (Input.GetKey("a")) {
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
         } else if (Input.GetKey("d")) {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
